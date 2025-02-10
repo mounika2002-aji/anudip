@@ -1,0 +1,26 @@
+Lab 3{2}NumPy Functions.
+
+Q2.Suppose you have a dataset containing monthly sales data for a company,and you want
+   to splint this data into quarterly reports for analysis and reporting purposes.
+
+input:
+ monthly_sales = np.array([120, 135, 148, 165, 180, 155, 168, 205, 198, 210, 225])
+
+
+import numpy as np
+
+# Monthly sales data for the company
+monthly_sales = np.array([120, 135, 148, 165, 180, 155, 168, 205, 198, 210, 225])
+
+# Reshape the array into quarters (3 months per quarter)
+quarters = monthly_sales.reshape(-1, 3)
+
+# If there are months left over, we need to handle the last quarter
+if len(monthly_sales) % 3 != 0:
+    last_quarter = monthly_sales[-(len(monthly_sales) % 3):]
+    quarters = np.vstack([quarters, last_quarter])
+
+# Print out the quarterly sales data
+print("Quarterly Sales Data:")
+for i, quarter in enumerate(quarters, start=1):
+    print(f"Quarter {i}: {quarter}")

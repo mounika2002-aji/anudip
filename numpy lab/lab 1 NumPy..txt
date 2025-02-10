@@ -1,0 +1,15 @@
+lab 1 NumPy.
+
+Q1.convert the below list into array then display the array
+   input: my_list = [1, 2, 3, 4, 5].?
+
+import numpy as np
+
+# Given list
+my_list = [1, 2, 3, 4, 5]
+
+# Convert list to a NumPy array
+array = np.array(my_list)
+
+# Display the array
+print(array)

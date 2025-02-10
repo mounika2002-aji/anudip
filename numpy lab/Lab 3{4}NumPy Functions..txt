@@ -1,0 +1,42 @@
+Lab 3{4}NumPy Functions.
+
+Q4.Support You have two sets of employees data-One containing information about full-time employees and another containing information about part-time employees.You want to combine this data to create a comparehensive employee data set for HR analysis.
+
+input:
+employee data fir full-time employees
+full_time_employees = np.([
+      [101,'John Doe', 'Full-time', 55000],
+      [102, 'jane smith', 'Full-time',60000],
+      [103, 'Mike Johnson', 'Full-time', 52000])
+
+
+Employee data for part-time employees
+part_time_employees = np.array([
+         [201, 'Alice Brown', 'Part-time', 25000],
+         [202,'Bob Wilson', 'Part-time', 25000],
+         [203, 'Emily Davis', 'Part-time', 25000])
+
+
+
+import numpy as np
+
+# Full-time employee data (ID, Name, Employment Type, Salary)
+full_time_employees = np.array([
+    [101, 'John Doe', 'Full-time', 55000],
+    [102, 'Jane Smith', 'Full-time', 60000],
+    [103, 'Mike Johnson', 'Full-time', 52000]
+])
+
+# Part-time employee data (ID, Name, Employment Type, Salary)
+part_time_employees = np.array([
+    [201, 'Alice Brown', 'Part-time', 25000],
+    [202, 'Bob Wilson', 'Part-time', 25000],
+    [203, 'Emily Davis', 'Part-time', 25000]
+])
+
+# Combine both full-time and part-time employees data into one comprehensive dataset
+combined_employee_data = np.vstack((full_time_employees, part_time_employees))
+
+# Display the comprehensive employee data, including employee IDs
+print("Comprehensive Employee Data (with Employee IDs):")
+print(combined_employee_data)
